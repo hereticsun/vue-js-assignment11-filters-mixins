@@ -22,12 +22,16 @@
 
                 <!-- Exercise 4 -->
                 <!-- Share the Computed Property rebuilding Exercise 2 via a Mixin -->
+                <h2>Exercise 4</h2>
+                <p>{{ countedText }}</p>
             </div>
         </div>
     </div>
 </template>
 
 <script>
+    import { textMixin } from './textMixin';
+
     export default {
         data() {
             return {
@@ -46,7 +50,8 @@
             textLength() {
                 return this.text + ' (' + this.text.length + ')';
             }
-        }
+        },
+        mixins: [textMixin]
     }
 </script>
 
